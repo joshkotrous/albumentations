@@ -6,25 +6,18 @@ on:
 
 
 jobs:
-    build:
-        runs-on: ubuntu-latest
-
-        steps:
-        - uses: actions/checkout@v3
-        - name: check urls
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: check urls
         uses: urlstechie/urlchecker-action@master
         with:
-
-
-            # A comma-separated list of file types to cover in the URL checks
-            file_types: .md
-
-
-            # The timeout seconds to provide to requests, defaults to 5 seconds
-            timeout: 7
-
-            # How many times to retry a failed request (each is logged, defaults to 1)
-            retry_count: 3
-
-            # choose if the force pass or not
-            force_pass : true
+          # A comma-separated list of file types to cover in the URL checks
+          file_types: .md
+          # The timeout seconds to provide to requests, defaults to 5 seconds
+          timeout: 7
+          # How many times to retry a failed request (each is logged, defaults to 1)
+          retry_count: 3
+          # choose if the force pass or not
+          force_pass : true
